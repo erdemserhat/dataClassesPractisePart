@@ -1,17 +1,33 @@
 fun main(args: Array<String>) {
-    println("Hello World!")
-    var oprtn:Operation=Operation()
-    println(oprtn.isPrime(12123))
+    //Constructors
 
-    var myPrimes:ArrayList<Int> = oprtn.findPrimesInRanges(50,60)
+    //Secondary Constructor
+    var bmw:Car=Car(COLOR.RED)
+    println(bmw.toString())
 
-    for (element in myPrimes.withIndex()){
-        println(element)
-    }
 
-    println(oprtn.findFactorial(0))
+    //Main Constructor
+    var mercedes:Car=Car(COLOR.BLACK,12,"Mercedes")
+    println(mercedes.toString())
 
-    var user:User=User("serhat","erdem",22,"serhat51","fdsf")
+    //How to use a constructor's default values
+
+    //According to declaration
+    var reno:Car=Car(COLOR.WHITE,12)
+    println(reno.toString())
+
+    //According to named arguments
+    var toros =Car(age=2, color=COLOR.BLACK)
+    println(toros.toString())
+
+    //Functions can also use default values
+    //For example;
+    fun add(a:Int,b:Int):Int=a+b
+    //Can be written like this
+    fun addWithDefault(a:Int=12,b:Int=12)=a+b
+    println(addWithDefault())
+
+    println(addWithDefault(b=0))
 
 
 }
