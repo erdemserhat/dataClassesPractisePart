@@ -1,7 +1,17 @@
 fun main(args: Array<String>) {
     println("Hello World!")
+    var oprtn:Operation=Operation()
+    println(oprtn.isPrime(12123))
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+    var myPrimes:ArrayList<Int> = oprtn.findPrimesInRanges(50,60)
+
+    for (element in myPrimes.withIndex()){
+        println(element)
+    }
+
+    println(oprtn.findFactorial(0))
+
+    var user:User=User("serhat","erdem",22,"serhat51","fdsf")
+
+
 }
